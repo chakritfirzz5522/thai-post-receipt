@@ -1,0 +1,50 @@
+body {
+  font-family: Tahoma, sans-serif;
+  margin: 0;
+  background: #fff;
+}
+.a5-page {
+  width: 148mm;
+  height: 210mm;
+  margin: auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: red;
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+  font-weight: bold;
+}
+.title { font-size: 20px; }
+.box {
+  border: 2px solid red;
+  padding: 10px;
+  margin-top: 10px;
+}
+.row {
+  margin: 8px 0;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+.line {
+  flex: 1;
+  border-bottom: 1px solid #000;
+  margin: 0 5px;
+}
+.line.short { width: 100px; }
+.zipcode-boxes { display: flex; gap: 3px; }
+.zip { width: 20px; height: 25px; border: 2px solid #003366; }
+.blue { color: blue; margin-right: 10px; }
+.red { color: red; margin-right: 10px; }
+.yellow { color: orange; margin-right: 10px; }
+.red-border { border: 2px solid red; }
+.total { font-weight: bold; }
+@media print {
+  body { margin: 0; }
+  .a5-page { width: 148mm; height: 210mm; }
+}
