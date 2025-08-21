@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ใบรับฝากส่งพัสดุไปรษณีย์ - ร้านไปรษณีย์พฤกษา15</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <div class="sheet a5">
+      <!-- แถบหัวสีแดงเต็มความกว้าง -->
+      <div class="fullred"><span>ใบรับฝากส่งพัสดุไปรษณีย์</span></div>
+
+      <!-- บรรทัดข้อมูลร้าน (สีน้ำเงิน) -->
+      <div class="shopblock">
+        <div class="shopname">ร้านไปรษณีย์พฤกษา15 (ตรงข้ามเซเว่น)</div>
+        <div class="shopaddr">199/3273 หมู่บ้านพฤกษา15 ตำบลแพรกษาใหม่ อำเภอเมืองสมุทรปราการ จังหวัดสมุทรปราการ 10280</div>
+        <div class="shopaddr">เบอร์โทร 092-524-5522</div>
+        <div class="underline"></div>
+      </div>
+
+      <!-- กรอบบน -->
+      <section class="panel red rounded">
+        <div class="row tight">
+          <label class="lb">วันที่ฝากส่ง</label>
+          <div class="line w-38"><input id="shipDate" /></div>
+          <label class="lb right">รอบ</label>
+          <div class="line w-22"><input id="roundText" placeholder="" /></div>
+        </div>
+
+        <div class="row tighter">
+          <label class="lb"></label>
+          <label class="ck"><input type="checkbox" id="roundMorning" /> รอบเช้า</label>
+          <label class="ck"><input type="checkbox" id="roundAfternoon" /> รอบบ่าย</label>
+        </div>
+
+        <div class="row tight">
+          <label class="lb">ชื่อผู้รับ</label>
+          <div class="line w-78"><input id="receiver" /></div>
+        </div>
+
+        <div class="row tight">
+          <label class="lb">ปลายทาง</label>
+          <div class="line w-50"><input id="destination" /></div>
+          <label class="lb right">รหัสไปรษณีย์</label>
+          <div class="zip">
+            <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
+          </div>
+        </div>
+
+        <div class="row service-row">
+          <label class="ck"><input type="checkbox" id="svcEMS" /><span class="ems"> EMS</span></label>
+          <label class="ck"><input type="checkbox" id="svcReg" /><span class="reg"> ลงทะเบียน</span></label>
+          <label class="ck"><input type="checkbox" id="svcNorm" /><span class="norm"> พัสดุธรรมดา</span></label>
+        </div>
+      </section>
+
+      <!-- กรอบล่าง -->
+      <section class="panel red rounded lower">
+        <div class="row tight">
+          <label class="ck"><input type="checkbox" id="isBox" /> กล่อง</label>
+          <div class="smallrect"><input id="boxSize" /></div>
+
+          <label class="ck pad"><input type="checkbox" id="isEnv" /> ซอง</label>
+          <div class="smallrect"><input id="envSize" /></div>
+
+          <div class="rhs">
+            <div class="field">
+              <label class="lb">ค่าธรรมเนียมไปรษณีย์</label>
+              <div class="rect"><input id="feePrice" type="number" /></div>
+            </div>
+            <div class="field">
+              <label class="lb">ค่าบริการฝากส่ง</label>
+              <div class="rect"><input id="servicePrice" type="number" /></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row tight">
+          <label class="lb">ค่ากล่อง/ซอง</label>
+          <div class="rect smallrect"><input id="boxPrice" type="number" /></div>
+
+          <div class="sumwrap">
+            <label class="sumlabel">ค่ากล่อง/ซอง + ค่าธรรมเนียม + ค่าบริการ</label>
+            <div class="rect total w-220"><input id="totalPrice" readonly /></div>
+          </div>
+        </div>
+
+        <div class="row tight">
+          <label class="lb">เลขตรวจสอบ</label>
+          <div class="line w-78"><input id="tracking" /></div>
+        </div>
+      </section>
+
+      <!-- ปุ่ม -->
+      <div class="buttons noprint">
+        <button class="btn btn-red" onclick="window.print()">พิมพ์ / บันทึก PDF</button>
+        <button class="btn btn-blue" onclick="clearForm()">ล้างข้อมูล</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

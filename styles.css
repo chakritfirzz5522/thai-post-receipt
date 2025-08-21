@@ -1,0 +1,75 @@
+
+:root{
+  --red:#d31924;
+  --blue:#1d5fb0;
+  --ink:#0f172a;
+  --line:#8796b6;
+  --gray:#94a3b8;
+  --sum:#ef4444;
+  --bg:#f3f6fb;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;background:var(--bg);
+  font-family:"Noto Sans Thai", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color:var(--ink);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+main{display:flex;justify-content:center;padding:8px}
+.sheet.a5{width:148mm;min-height:210mm}
+
+/* หัวแดงเต็ม */
+.fullred{
+  background:var(--red); color:#fff; text-align:center; font-weight:700;
+  padding:10px 12px; border-radius:10px; margin-bottom:8px;
+  box-shadow:0 2px 0 rgba(0,0,0,.08) inset;
+}
+
+/* ข้อมูลร้าน */
+.shopblock{margin:2px 0 6px}
+.shopname{color:var(--blue);font-weight:700;font-size:13px;line-height:1.2;margin-bottom:1px}
+.shopaddr{color:#1f2937;font-size:11px;line-height:1.25}
+.underline{height:3px;background:#1d5fb0;opacity:.4;width:200px;margin-top:4px;border-radius:2px}
+
+/* กรอบ */
+.panel.red{border:3px solid var(--red);background:#fff;padding:10px;margin-bottom:8px}
+.rounded{border-radius:14px}
+.lower{margin-top:6px}
+.row{display:flex;align-items:center;gap:10px;padding:6px 0;flex-wrap:wrap}
+.row.tight{padding:4px 0}
+.row.tighter{padding:2px 0}
+.lb{font-size:12px;min-width:90px}
+.lb.right{min-width:auto;margin-left:auto;margin-right:2px}
+.line{border-bottom:2px solid var(--line);height:26px;position:relative}
+.line input{position:absolute;left:6px;right:6px;bottom:2px;top:0;border:0;background:transparent;outline:0;font-size:13px}
+.w-22{width:22%}.w-38{width:38%}.w-50{width:50%}.w-78{width:78%}
+
+.zip input{width:26px;height:26px;text-align:center;border:2px solid var(--gray);border-radius:6px;font-weight:700;margin-right:4px}
+.ck{display:inline-flex;gap:6px;align-items:center;font-size:12px}
+.service-row{padding-top:2px}
+.ems{color:#0b7dda}.reg{color:#c81e1e}.norm{color:#e0a400}
+
+/* กรอบล่าง */
+.smallrect{width:160px;height:30px;border:2px solid var(--gray);border-radius:6px}
+.smallrect input{width:100%;height:100%;border:0;outline:0;background:transparent;padding:4px 8px}
+.pad{margin-left:14px}
+.rhs{margin-left:auto;display:grid;grid-template-columns: 210px 210px;gap:10px}
+.field .rect{height:32px;border:2px solid var(--gray);border-radius:6px}
+.field .rect input{width:100%;height:100%;border:0;outline:0;background:transparent;padding:4px 8px}
+
+.sumwrap{display:flex;align-items:center;gap:8px;margin-left:auto}
+.sumlabel{color:var(--sum);font-weight:700}
+.w-220{width:220px}
+.rect.total{background:#fff5f5;border-color:var(--sum)}
+.buttons{display:flex;gap:10px;margin-top:8px}
+.btn{border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+.btn-red{background:var(--red);color:#fff}
+.btn-blue{background:var(--blue);color:#fff}
+
+@media print{
+  body{background:#fff}
+  .noprint{display:none!important}
+  .sheet.a5{width:148mm;min-height:210mm}
+}
