@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <title>ใบรับฝากส่งพัสดุไปรษณีย์ – พฤกษา15</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="actionbar noprint">
+    <button id="btnPrint" class="btn btn-red">พิมพ์ / PDF (A5)</button>
+    <button id="btnClear" class="btn btn-blue">ล้างข้อมูล</button>
+  </div>
+
+  <main id="app">
+    <div id="stage" class="stage">
+      <!-- Header -->
+      <div class="header-red">
+        <div class="left">ร้านถ่ายรูปและไปรษณีย์ พฤกษา15 (ตรงข้ามเซเว่น) โทร 092-524-5522</div>
+        <div class="right">ใบรับฝากส่งพัสดุไปรษณีย์</div>
+      </div>
+
+      <!-- Frame 1 -->
+      <section class="frame frame-top">
+        <div class="row">
+          <div class="label">วันที่ฝากส่ง</div>
+          <div class="line"><input class="ipt" id="date" placeholder=""></div>
+          <div class="label sm">รอบเช้า</div><div class="boxchk"><input type="checkbox" id="roundM"></div>
+          <div class="label sm">รอบบ่าย</div><div class="boxchk"><input type="checkbox" id="roundA"></div>
+        </div>
+
+        <div class="row">
+          <div class="label">ชื่อผู้รับ</div>
+          <div class="line wide"><input class="ipt" id="receiver"></div>
+        </div>
+
+        <div class="row">
+          <div class="label">ปลายทาง</div>
+          <div class="line"><input class="ipt" id="dest"></div>
+          <div class="label sm">รหัสไปรษณีย์</div>
+          <div class="zip">
+            <input maxlength="1" class="cell" inputmode="numeric">
+            <input maxlength="1" class="cell" inputmode="numeric">
+            <input maxlength="1" class="cell" inputmode="numeric">
+            <input maxlength="1" class="cell" inputmode="numeric">
+            <input maxlength="1" class="cell" inputmode="numeric">
+          </div>
+        </div>
+      </section>
+
+      <!-- Middle services -->
+      <div class="services">
+        <label class="svc blue"><input type="checkbox" id="svcEMS"> EMS</label>
+        <label class="svc red"><input type="checkbox" id="svcREG"> ลงทะเบียน</label>
+        <label class="svc yellow"><input type="checkbox" id="svcNORM"> พัสดุธรรมดา</label>
+      </div>
+
+      <!-- Frame 2 -->
+      <section class="frame frame-bot">
+        <div class="row">
+          <div class="label">กล่อง</div>
+          <div class="boxchk lg"><input type="checkbox" id="hasBox"></div>
+          <div class="line price"><input class="ipt ipt-amt" id="priceBox" inputmode="decimal"></div>
+        </div>
+
+        <div class="row">
+          <div class="label">ซอง</div>
+          <div class="boxchk lg"><input type="checkbox" id="hasEnv"></div>
+          <div class="line price"><input class="ipt ipt-amt" id="priceEnv" inputmode="decimal"></div>
+        </div>
+
+        <div class="row">
+          <div class="label">ค่าธรรมเนียมไปรษณีย์</div>
+          <div class="line price"><input class="ipt ipt-amt" id="feePost" inputmode="decimal"></div>
+        </div>
+
+        <div class="row">
+          <div class="label">ค่าบริการฝากส่ง</div>
+          <div class="line price"><input class="ipt ipt-amt" id="feeService" inputmode="decimal"></div>
+        </div>
+
+        <div class="row total">
+          <div class="label red">กล่อง/ซอง + ค่าธรรมเนียม + ค่าบริการ</div>
+          <div class="line price redbox"><input class="ipt ipt-amt" id="sumTotal" readonly></div>
+        </div>
+
+        <div class="row">
+          <div class="label">เลขตรวจสอบ</div>
+          <div class="line wide"><input class="ipt" id="track"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
