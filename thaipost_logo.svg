@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="48" viewBox="0 0 200 48">
+  <defs><style>
+    .r{fill:#d31924}
+    .b{fill:#1d5fb0}
+    .t{font-family:Arial, sans-serif; font-size:16px; font-weight:700; fill:#1d5fb0}
+  </style></defs>
+  <!-- stylized wing -->
+  <path class="r" d="M8 26 L92 8 L96 14 L28 28 Z"/>
+  <path class="b" d="M8 26 L94 20 L96 24 L28 30 Z"/>
+  <text class="t" x="104" y="30">ไปรษณีย์ไทย</text>
+</svg>
