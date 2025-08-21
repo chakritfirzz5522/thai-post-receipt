@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ใบรับฝากส่งพัสดุไปรษณีย์ - ร้านไปรษณีย์พฤกษา15</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <div class="page">
+      <header class="shopline">
+        <div class="shopname">
+          ร้านไปรษณีย์พฤกษา15 (ตรงข้ามเซเว่น) • โทร 092-524-5522
+        </div>
+        <div class="shopaddr">
+          199/3273 หมู่บ้านพฤกษา15 ตำบลแพรกษาใหม่ อำเภอเมืองสมุทรปราการ จังหวัดสมุทรปราการ 10280
+        </div>
+        <div class="ribbon">
+          <span>ใบรับฝากส่งพัสดุไปรษณีย์</span>
+        </div>
+      </header>
+
+      <section class="card">
+        <div class="row gap">
+          <div class="field w-60">
+            <label>วันที่ฝากส่ง</label>
+            <input id="shipDate" type="text" placeholder="dd/mm/yy" />
+          </div>
+          <div class="field w-40">
+            <label>รอบ</label>
+            <label class="ck"><input id="roundMorning" type="checkbox" /> รอบเช้า</label>
+            <label class="ck"><input id="roundAfternoon" type="checkbox" /> รอบบ่าย</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field w-60">
+            <label>ชื่อผู้รับ</label>
+            <input id="receiver" type="text" placeholder="ชื่อผู้รับ" />
+          </div>
+          <div class="field w-40">
+            <label>รหัสไปรษณีย์</label>
+            <div class="zipboxes" id="zipBoxes">
+              <input maxlength="1" />
+              <input maxlength="1" />
+              <input maxlength="1" />
+              <input maxlength="1" />
+              <input maxlength="1" />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field w-70">
+            <label>ปลายทาง</label>
+            <input id="destination" type="text" placeholder="จังหวัด/อำเภอ/เขต" />
+          </div>
+          <div class="field w-30">
+            <label>ประเภทการส่ง</label>
+            <div class="checks">
+              <label class="ck"><input id="svcEMS" type="checkbox" /> EMS</label>
+              <label class="ck"><input id="svcReg" type="checkbox" /> ลงทะเบียน</label>
+              <label class="ck"><input id="svcNorm" type="checkbox" /> พัสดุธรรมดา</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="row">
+          <div class="field w-25">
+            <label>กล่อง</label>
+            <input id="box" type="text" placeholder="เช่น B3 / ขนาด" />
+          </div>
+          <div class="field w-25">
+            <label>ซอง</label>
+            <input id="envelope" type="text" placeholder="ขนาด" />
+          </div>
+          <div class="field w-50">
+            <label>ค่าธรรมเนียมไปรษณีย์ (รวมขนส่ง/น้ำมัน)</label>
+            <input id="postage" type="number" step="1" min="0" placeholder="0" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field w-33">
+            <label>ค่าบริการฝากส่ง</label>
+            <input id="serviceFee" type="number" step="1" min="0" placeholder="0" />
+          </div>
+          <div class="field w-33">
+            <label>ค่ากล่อง/ซอง</label>
+            <input id="materialFee" type="number" step="1" min="0" placeholder="0" />
+          </div>
+          <div class="field w-33 total">
+            <label>รวม (ค่ากล่อง/ซอง + ค่าธรรมเนียม + ค่าบริการ)</label>
+            <input id="grandTotal" type="number" step="1" min="0" readonly />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field w-100">
+            <label>เลขตรวจสอบ / Tracking</label>
+            <input id="tracking" type="text" placeholder="เช่น ET169561524TH" />
+          </div>
+        </div>
+      </section>
+
+      <footer class="actions">
+        <button id="btnPrint">พิมพ์ / บันทึก PDF</button>
+        <button id="btnClear">ล้างฟอร์ม</button>
+        <a class="btn" href="https://github.com/new" target="_blank" rel="noreferrer">อัปโหลดขึ้น GitHub</a>
+      </footer>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
